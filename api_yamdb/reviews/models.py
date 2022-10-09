@@ -1,7 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import MaxValueValidator, MinValueValidator
-from reviews.validators import validate_date
 from django.db import models
+from reviews.validators import validate_date
 
 
 class User(AbstractUser):
