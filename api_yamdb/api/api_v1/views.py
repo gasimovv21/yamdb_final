@@ -3,25 +3,23 @@ from django.core.mail import send_mail
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import filters, permissions, viewsets, status
-from rest_framework.decorators import (action, api_view,
-                                       permission_classes)
+from rest_framework import filters, permissions, status, viewsets
+from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
+from reviews.models import Category, Genre, Review, Title, User
 
-from reviews.models import Category, Genre, Title, Review, User
 from .filters import TitlesFilter
 from .mixins import CreateListDestroyViewSet
-from .permissions import (IsAdmin, IsAdminOrReadOnly,
-                          IsAdminModeratorOwnerOrReadOnly)
-from .serializers import (
-    CategorySerializer, GenreSerializer, TitleSerializer,
-    ReadOnlyTitleSerilizer, ReviewSerializer,
-    CommentSerializer, RegisterDataSerializer,
-    TokenSerializer, UserEditSerializer,
-    UserSerializer)
+from .permissions import (IsAdmin, IsAdminModeratorOwnerOrReadOnly,
+                          IsAdminOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReadOnlyTitleSerilizer,
+                          RegisterDataSerializer, ReviewSerializer,
+                          TitleSerializer, TokenSerializer, UserEditSerializer,
+                          UserSerializer)
 
 
 class CategoryViewSet(CreateListDestroyViewSet):
