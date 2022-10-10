@@ -8,7 +8,6 @@ services:
       - ./.env
   web:
     build: ../api_yamdb/
-    image: gasimovv21/infra_web:latest
     restart: always
     volumes:
       - static_value:/app/static/
