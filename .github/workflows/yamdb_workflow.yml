@@ -62,9 +62,6 @@ jobs:
         script: |
           sudo docker-compose pull
           sudo docker-compose stop
-          sudo systemctl stop nginx
-          sudo systemctl start nginx
-          sudo systemctl reload nginx
           sudo docker-compose rm web
           touch /home/gasimovv21/.env
           echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
