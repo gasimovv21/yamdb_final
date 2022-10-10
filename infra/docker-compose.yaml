@@ -7,8 +7,7 @@ services:
     env_file:
       - ./.env
   web:
-    build:
-      image: gasimovv21/infra_web:latest
+    image: gasimovv21/infra_web:latest
     restart: always
     volumes:
       - static_value:/app/static/
