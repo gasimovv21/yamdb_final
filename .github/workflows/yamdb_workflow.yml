@@ -63,6 +63,8 @@ jobs:
           sudo docker-compose pull
           sudo docker-compose stop
           sudo docker-compose rm web
+          sudo systemctl restart nginx
+          sudo systemctl reload nginx
           touch /home/gasimovv21/.env
           echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
           echo DB_NAME=${{ secrets.DB_NAME }} >> .env
