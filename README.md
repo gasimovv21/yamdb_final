@@ -1,6 +1,7 @@
 # Yamdb-Final
 
-![Workflow status](https://github.com/gasimovv21/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+[![Workflow status]
+(https://github.com/gasimovv21/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](http://84.252.142.26)
 
 ## **Описание**
 
