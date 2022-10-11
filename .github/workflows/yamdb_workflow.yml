@@ -64,7 +64,6 @@ jobs:
           sudo docker-compose stop
           sudo docker-compose rm web
           touch /home/gasimovv21/.env
-          echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
           echo DEBUG=${{ secrets.DEBUG }} >> .env
           echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
           echo DB_NAME=${{ secrets.DB_NAME }} >> .env
